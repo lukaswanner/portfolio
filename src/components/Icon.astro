@@ -4,25 +4,30 @@ import { iconPaths } from './IconPaths';
 
 export interface Props {
 	icon: keyof typeof iconPaths;
+	viewBox?:string;
 	color?: string;
 	gradient?: boolean;
 	size?: string;
 }
 
-const { color = 'currentcolor', gradient, icon, size } = Astro.props;
+const { color = 'currentcolor', viewBox, gradient, icon, size } = Astro.props;
 const iconPath = iconPaths[icon];
 
 const attrs: HTMLAttributes<'svg'> = {};
 if (size) attrs.style = { '--size': size };
 
 const gradientId = 'icon-gradient-' + Math.round(Math.random() * 10e12).toString(36);
+let usedViewBox = '0 0 256 256';
+if(viewBox){
+	usedViewBox = viewBox
+}
 ---
 
 <svg
 	xmlns="http://www.w3.org/2000/svg"
 	width="40"
 	height="40"
-	viewBox="0 0 256 256"
+	viewBox={usedViewBox}
 	aria-hidden="true"
 	stroke={gradient ? `url(#${gradientId})` : color}
 	{...attrs}
