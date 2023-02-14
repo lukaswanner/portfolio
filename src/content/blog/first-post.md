@@ -2,7 +2,7 @@
 title: First Blog Entry | Docker
 author: Lukas Wanner
 publishDate: 2023-02-06 18:00:00
-img: /assets/stock-2.jpg
+img: /portfolio/assets/stock-2.jpg
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
   This is a first post to test the astros content management
