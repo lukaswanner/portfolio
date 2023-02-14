@@ -1,5 +1,9 @@
 # Astro Starter Kit: Portfolio
 
+This site was based on the portfolio template and changed to fit my needs.
+
+> 🧑‍🚀 **Seasoned astronaut?** Pull and test Astro locally!
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -15,4 +19,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to reach out to me I'm happy to reply
