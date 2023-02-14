@@ -11,14 +11,7 @@ import Hero from "../components/Hero.astro";
       <Hero
         title="About"
         tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-      >
-        <img
-          width="1553"
-          height="873"
-          src="/assets/at-work.jpg"
-          alt="Lukas Wanner at portrait"
-        />
-      </Hero>
+      />
 
       <section>
         <h2 class="section-title">Background</h2>
@@ -49,33 +42,44 @@ import Hero from "../components/Hero.astro";
       <section>
         <h2 class="section-title">Education</h2>
         <div class="content">
-          <p>Corporis voluptates tenetur laudantium.</p>
+          <ul class="about-section-list">
+            <li>
+              Bachelor of Science in Applied Computer Science, HTWG Konstanz
+            </li>
+            <li>Major: Computer Science</li>
+            <li>Graduation Date: March 2022</li>
+            <li>
+              Relevant Coursework: Data Structures and Algorithms, Web
+              Development, Operating Systems, Database Systems
+            </li>
+          </ul>
         </div>
       </section>
       <section>
         <h2 class="section-title">Skills</h2>
         <div class="content">
-          <p>
-            Front-end:
-            <p>
+          <ul class="about-section-list">
+            <li>Front-end:</li>
+            <li>
               HTML, CSS and JavaScript, Typescript React, Vue, Svelte or other
-              JavaScript frameworks Responsive design and cross-browser
-              compatibility UI/UX design principles Git and version control
-            </p>
-            <p>Back-end:</p>
-            <p>
+              JavaScript frameworks.
+            </li>
+            <li>Responsive design and UI/UX design</li>
+            <li>Back-end:</li>
+            <li>
               Server-side scripting languages such as Node.js or Python Database
-              management (SQL, Postgres, etc.) RESTful API design and
-              development Server deployment and hosting
-            </p>
-            <p>General:</p>
-            <p>
+              management (SQL, Postgres, etc.)
+            </li>
+            <li>
+              RESTful API design and development Server deployment and hosting
+            </li>
+            <li>General:</li>
+            <li>Docker, Git and scrum/agile workflow</li>
+            <li>
               Web security and best practices Agile development methodologies
-              Problem-solving and debugging skills Excellent written and verbal
-              communication skills Understanding of modern web development
-              trends and technologies
-            </p>
-          </p>
+            </li>
+            <li>Excellent written and verbal communication skills</li>
+          </ul>
         </div>
       </section>
     </main>
@@ -117,6 +121,16 @@ import Hero from "../components/Hero.astro";
       text-decoration: 1px solid underline transparent;
       text-underline-offset: 0.25em;
       transition: text-decoration-color var(--theme-transition);
+    }
+
+    .about-section-list {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: var(--text-md);
+      line-height: 1.2;
+      list-style: none;
     }
 
     .content :global(a:hover),
